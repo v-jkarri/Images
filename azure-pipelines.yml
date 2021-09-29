@@ -25,5 +25,13 @@ steps:
     azurePowerShellVersion: latestVersion
     pwsh: false
     Inline: |
-     Write-Host "##[debug] Pubishing AVD Msix Package:"
+      Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
+      Install-Module -Name Az.DesktopVirtualization -Force -Verbose -Scope CurrentUser
+      Write-Host "##[debug] Pubishing AVD Msix Package:"
+      Write-Host "##[debug] `tAVD Resource Group"
+      Write-Host "##[debug] `tAVD Host Pool Name: "
+      Write-Host "##[debug] `tMsix Application UNC Path:"
+      Write-Host "##[debug] `tMsix Application UNC FileName:"
+      Write-Host "##[debug] `tMsix App Attach image complete Path: "
+      Write-Host "##[debug] `tApplication Display Name:"
      
