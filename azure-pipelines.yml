@@ -24,8 +24,7 @@ steps:
     ScriptType: 'InlineScript'
     azurePowerShellVersion: latestVersion
     pwsh: false
-    Inline: |
-      Install-PackageProvider -Name NuGet -Force -Scope CurrentUser
+    Inline: |      
       Install-Module -Name Az.DesktopVirtualization -Force -Verbose -Scope CurrentUser
       Write-Host "##[debug] Pubishing AVD Msix Package:"
       Write-Host "##[debug] `tAVD Resource Group"
